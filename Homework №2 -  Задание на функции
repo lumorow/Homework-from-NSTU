@@ -1,0 +1,117 @@
+// Задание №1
+function task1(a,b){
+  console.log('Задание №1');
+  let n;
+  if (a > b){
+    n = a - b;
+    console.log(`Число ${a} > ${b} на ${n}`);
+  }
+  else if (b > a){
+    n = b - a;
+    console.log(`Число ${b} > ${a} на ${n}`);
+  }
+  else{
+    console.log("Число a и b равны");
+  }
+}  
+
+// Задание №2
+
+let arrname = ["Саша", "Андрей", "Олег","Юлия", "Ксения", "Артём"];
+function task2(a){
+  console.log('Задание №2');
+  console.log(arrname.sort());
+}
+
+// Задание №3
+
+let arrnumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+function task3(arr){
+  console.log('Задание №3');
+  let n = arrnumbers.length;
+  for(let i = 0; i < n; i++){
+    if(Math.pow(arrnumbers[i],2) > 20 && Math.pow(arrnumbers[i],2) < 100){
+    arrnumbers.push(arrnumbers[i]);
+    }
+  }
+  arrnumbers.splice(0,n);
+  console.log(arrnumbers);
+}
+
+// Задание №4
+
+function task4(a){
+  console.log('Задание №4');
+  for(let i = 1; i < 26; i++){
+    console.log(`${a} ${i}`);
+  }
+}
+
+// Задание №5
+
+let arr5 = [10,20,30,40,50,60,70];
+function task5(arr5){
+  console.log('Задание №5');
+  let min = arr5[0];
+  for(let i = 0; i < arr5.length; i++){
+    for(let j = i+1; j < arr5.length; j++){
+      if(arr5[i]>arr5[j]){
+         min = arr5[j];
+         arr5[j] = arr5[i];
+         arr5[i] = min;
+      }
+    }
+  }
+  console.log("Отсортированный массив: " + arr5);
+}
+
+// Задание №6
+
+let name6 = "Саша";
+function task6(arr6){
+  console.log('Задание №6');
+  newname6 = name6.split('');
+  console.log(newname6);
+}
+
+// Задание №7
+
+let arr7 = [1,2,3,4];
+function task7(arr7){
+  console.log('Задание №7');
+  let sum = 0;
+  for(let i = 0; i < arr7.length; i++){
+    sum+=arr7[i];
+  }
+  console.log("Сумма = " + sum);
+}
+
+// Задание №8
+
+let string8 = "Hello World!";
+function task8(string){
+  console.log('Задание №8');
+  console.log(`Строка - |Hello World!| имеет ${string8.length} символ`);
+}
+
+// Задание №9
+
+let string9 = "My name is";
+function task9(name,n){
+  console.log('Задание №9');
+  for(let i = 0; i < n; i++){
+    console.log(name);
+  }
+}
+
+// Вызов функций каждого из заданий
+
+//task1(64,24);
+//task2(arrname);
+//task3(arrnumbers);
+//task4("Я номер");
+//task5(arr5);
+//task6(name6);
+//task7(arr7);
+//task8(string8);
+//task9(string9,5);
