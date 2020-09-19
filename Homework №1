@@ -1,0 +1,51 @@
+//Получаем случайный массив с введенным количеством элементов
+const num = Number(window.prompt('Введите количесвто элементов:'))
+var arr = new Array (num);
+for(let i = 0; i < num; i++){
+  arr[i] = getRandomInt(0,101);
+}
+console.log(arr);
+
+
+//Сортируем массив
+var min = arr[0];
+  for(let i = 0; i < num; i++){
+    for(let j = i+1; j < num; j++){
+      if(arr[i]>arr[j]){
+         min = arr[j];
+         arr[j] = arr [i];
+         arr[i] = min;
+      }
+    }
+  }
+console.log("Отсортированный массив: " + arr);
+
+
+//Работаем с загаданным числом
+let left = 0;
+let right = num;
+const search = Number(window.prompt('А теперь загадайте число от 0 до 100:'));
+
+for (let i = 0; i < num; i++){
+var mid = Math.trunc((left + right)/2) ;
+if(search === arr[mid]){
+console.log("Ваше загаданное число под номером: " + mid);
+break;
+}
+else if (zag < arr[mid]){
+right = mid;
+}
+else{
+left = mid;
+}
+if(i === num - 1){
+console.log("Вашего загаданного числа <<" + zag +">> не существует в списке :(");
+}
+}
+
+
+
+//Функция для рандомайзера
+function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max - min)) + min;
+}
